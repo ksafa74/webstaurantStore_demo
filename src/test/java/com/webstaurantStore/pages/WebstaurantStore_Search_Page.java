@@ -14,6 +14,8 @@ public class WebstaurantStore_Search_Page {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath = "//li[@class='inline-block leading-4 align-top rounded-r-md']/a[contains(@aria-label,'go to page')]")
+    public WebElement rightPageArrow;
     @FindBy(xpath = "//form[@id='searchForm']")
     public WebElement clickSearchBox;
     @FindBy(xpath = "//input[@id='searchval']")
@@ -32,6 +34,9 @@ public class WebstaurantStore_Search_Page {
     public WebElement emptyCartElement2;
     @FindBy(xpath = "//span[@data-testid ='itemDescription']")
     public List<WebElement> itemsList;
+
+    @FindBy(xpath = "//div//span[@data-testid='itemDescription']")
+    public List<WebElement> tablesList;
 
    // @FindBy(xpath = "//span[@class='block font-semibold text-sm-1/2 leading-none mt-4 mb-0 max-h-10 //hover:max-h-full min-h-10 overflow-hidden hover:overflow-visible text-center']")
     //``public List<WebElement> itemsList;
